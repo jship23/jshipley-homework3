@@ -6,14 +6,20 @@ var characters = {
   "special": "!@#$%^&*(){}[]=<>/,.|~?",
 };
 
-
-var generateBtn = document.querySelector("#generate").addEventListener('click', promptMe);
+//click on generate password button
+var generateBtn = document.querySelector("#generate")
+generateBtn.addEventListener('click', passwordCriteria);
 
 //prompt user for password criteria
-function promptMe() {
+function passwordCriteria() {
+
   //prompt how many characters
-  var charLength = prompt("How many characters do you want your password to have?");
+  var charLength = parseInt(prompt("How many characters do you want your password to have?"));
   console.log(charLength)
+  //set the password lenght = to character lenghth input
+  var passwordLength = charLength
+  console.log(passwordLength)
+
   //include uppercase
   var includeUpp = confirm("Do you want to include capital letters?")
   console.log(includeUpp)
@@ -26,10 +32,8 @@ function promptMe() {
   //include special characters
   var includeSym = confirm("Do you want to include special characters?")
   console.log(includeSym)
+
 };
-  
-
-
 
   
 
